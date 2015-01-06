@@ -15,19 +15,20 @@ You need to include in your project the following files:
 - IMPieChartLayer.h
 - IMPieSliceDescriptor.m
 - IMPieSliceDescriptor.h
+- IMPieChartDecoratingView.m
+- IMPieChartDecoratingView.h
 - IMMacroToolbox.h
 
 Then on your View Controller implement the protocols IMPieChartViewDelegate and IMPieChartViewDataSource
 
-	@interface MyViewController : UIViewController < IMPieChartDelegate, IMPieChartDataSource >
+	@interface MyViewController : UIViewController < IMPieChartDelegate, IMPieChartDataSource, IMPieChartDecoratingViewDelegate >
 
-then declare a property of type IMPieChartView
+then declare a property of type IMPieChartView and of type IMPieChartDecoratingView
 
 	@property (nonatomic, strong) IMPieChartView * pieChartView;
+	@property (nonatomic, strong) IMPieChartDecoratingView * decoratingView;
 
 then on the viewDidLoad method you configure the pie using the following properties:
-
-	 @property (nonatomic, strong)
 
     -(void)viewDidLoad {
 		// create the chart pie
@@ -51,11 +52,25 @@ then on the viewDidLoad method you configure the pie using the following propert
 	
 		// you can locate the selection point in the top, left, right or bottom of the pie chart.
 	    self.pieChartView.selectionType = IMPieChartSelectionTypeBottom;
+	    
+	    // you can specify the animation type from IMPieChartAnimationTypeBouncing or IMPieChartAnimationTypeMechanicGear
+	    self.pieChartView.animationType = IMPieChartAnimationTypeBouncing;
 		
 		// add the pie chart to the view controller's main view
 		[self.view addSubview];
 		...
 	}	
+
+now configure the decorating view at the bottom of viewDidLoad
+
+
+	self.decoratingView = [[IMPieChartDecoratingView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+	// this is a percentage number of the size desired for the selector view
+	self.decoratingView.sizingFactor = 0.16;
+	
+	// this is the decorator's delegate which provide the selector view as well as the contained pie chart view
+	self.decoratingView.decoratorDelegate = self;
+
 
 now you can add data per slice using the IMPieSliceDescriptor class, for that declare a property of type NSArray on your view controller
 
