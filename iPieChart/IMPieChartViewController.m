@@ -45,7 +45,6 @@
    self.decoratingView.sizingFactor = 0.16;
    self.decoratingView.decoratorDelegate = self;
    self.selectorView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Arrow"]];
-//   self.decoratingView.selectorView.image = [UIImage imageNamed:@"Arrow"];
    
    // configure color badge ...
    self.colorBadge.layer.cornerRadius = 12;

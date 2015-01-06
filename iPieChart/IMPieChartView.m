@@ -11,10 +11,6 @@
 #import "IMPieChartView.h"
 #import "IMMacroToolbox.h"
 
-/*************************************************
- * _IMPieChartView implementation
-*************************************************/
-
 @interface IMPieChartView ()
 {
    GLKVector3              _origin;
@@ -62,7 +58,6 @@
 
 -(void)layoutSubviews {
    self.pieChart.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
-//   [self.layer setNeedsDisplay];
    [self.pieChart setNeedsDisplay];
    _origin = GLKVector3Make(self.pieChart.position.x, self.pieChart.position.y, 0);
    
@@ -161,11 +156,15 @@
    
    //
    // IMPORTANT NOTE:
-   //     Through trigonometry we know that cos(angle) = adjacent / hypotenuse; additionally we normalize the selectionPoint above
-   //     into our direction vector where the magnitud becomes in the hypotenuse (magnitud = 1) of the triangle formed between the
-   //     touchpoint, the origin and the coordinate in Y (the adjacent). So by substituting the values we have that:
+   //     From trigonometry we know that cos(angle) = adjacent / hypotenuse; additionally (as in the line above)
+   //     we normalize the selectionPoint which becomes in our direction vector which is the hypotenuse (of magnitud = 1)
+   //     of the triangle formed between the touchpoint, the origin and the coordinate in Y (the adjacent).
+   //     So by value substitution we have that:
    //
-   //     cos(angle) = Y / 1 so cos(angle) = Y and the acos(Y) = angle and the angle is what we need so...
+   //     cos(angle) = Y / 1 so cos(angle) = Y and the acos(Y) = angle and the angle is what we need ;)
+   //
+   //     check out here a clearer explanation in case you need it:
+   //     http://chimera.labs.oreilly.com/books/1234000001814/ch03.html#OnFingerMove
    //
    CGFloat angle = acos(direction.y);
    if (direction.x > 0)
