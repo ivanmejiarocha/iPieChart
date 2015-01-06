@@ -28,6 +28,10 @@ then declare a property of type IMPieChartView and of type IMPieChartDecoratingV
 	@property (nonatomic, strong) IMPieChartView * pieChartView;
 	@property (nonatomic, strong) IMPieChartDecoratingView * decoratingView;
 
+declare a property of type UIImageView which will be used as the selector view, but here you can use any custom view you implement
+
+	@property (nonatomic, strong) UIImageView * selectorView;
+
 then on the viewDidLoad method you configure the pie using the following properties:
 
     -(void)viewDidLoad {
@@ -91,7 +95,7 @@ NOTE:
 
 IMOpaqueHexColor is a macro declared in IMMacroToolbox.h that is used to get some more interesting colors out from the ones that come in stock.
 
-Now let's implement the delegate methods as follows:
+Now let's implement the pie chart's delegate methods as follows:
 
 	-(void)pieChart:(IMPieChartView *)pieChart didSelectSlice:(IMPieSliceDescriptor *)slice {
 		// Here you get the selected slice, which is the slice that passes 
@@ -121,5 +125,16 @@ Now let's implement the data source methods as follows:
 	   // Here you provide the slice descriptor for the index requested.
 	   return self.data[index];
 	}
+
+Now let's implement the decorator's delegate methods:
+
+	-(UIView *)decoratorSelectorView {
+	   return self.selectorView;
+	}
+	
+	-(IMPieChartView *)decoratorPieChartView {
+	   return self.pieChartView;
+	}
+	
 
 That's pretty much it.
