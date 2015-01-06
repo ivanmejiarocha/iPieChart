@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TBa-9n-XMf">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pie Chart View Controller-->
+        <scene sceneID="zc8-d6-WdZ">
+            <objects>
+                <viewController id="TBa-9n-XMf" customClass="IMPieChartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f9S-Me-nUR"/>
+                        <viewControllerLayoutGuide type="bottom" id="3vo-tw-gYL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vzF-4C-iRN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JtV-jt-mPT" customClass="IMPieChartDecoratingView">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HG9-Ms-E7A" customClass="IMPieChartView">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Dt1-ci-fNl"/>
+                                    <constraint firstAttribute="width" constant="300" id="ERe-E4-vfU"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1P-9o-6R3">
+                                <rect key="frame" x="76" y="40" width="448" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naz-IY-Jaf">
+                                <rect key="frame" x="23" y="38" width="25" height="25"/>
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="00t-5H-eUU"/>
+                                    <constraint firstAttribute="height" constant="25" id="0cV-lY-tlk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n1P-9o-6R3" firstAttribute="top" secondItem="vzF-4C-iRN" secondAttribute="topMargin" constant="40" id="4VY-5w-Enr"/>
+                            <constraint firstItem="n1P-9o-6R3" firstAttribute="leading" secondItem="vzF-4C-iRN" secondAttribute="leadingMargin" constant="60" id="8Da-8X-i63"/>
+                            <constraint firstAttribute="centerY" secondItem="JtV-jt-mPT" secondAttribute="centerY" id="DBy-VT-ELP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n1P-9o-6R3" secondAttribute="trailing" constant="60" id="JZz-7c-sVs"/>
+                            <constraint firstItem="naz-IY-Jaf" firstAttribute="top" secondItem="f9S-Me-nUR" secondAttribute="bottom" constant="18" id="R6y-oe-9zY"/>
+                            <constraint firstAttribute="centerX" secondItem="JtV-jt-mPT" secondAttribute="centerX" id="aYx-ng-ph5"/>
+                            <constraint firstItem="naz-IY-Jaf" firstAttribute="leading" secondItem="vzF-4C-iRN" secondAttribute="leadingMargin" constant="7" id="cOV-t7-ajk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorBadge" destination="naz-IY-Jaf" id="1sz-ek-nH2"/>
+                        <outlet property="decoratingView" destination="JtV-jt-mPT" id="aJt-Nc-KRJ"/>
+                        <outlet property="infoLabel" destination="n1P-9o-6R3" id="trI-zG-289"/>
+                        <outlet property="pieChartView" destination="HG9-Ms-E7A" id="sIi-2m-TIE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2dT-Pm-je2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="640" y="398"/>
+        </scene>
+    </scenes>
+</document>
