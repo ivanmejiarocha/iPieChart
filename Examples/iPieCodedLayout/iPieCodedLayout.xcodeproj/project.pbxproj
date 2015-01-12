@@ -17,7 +17,6 @@
 		E63120451A5BA67E00A7ED77 /* IMPieChartDecoratingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E631203C1A5BA67E00A7ED77 /* IMPieChartDecoratingView.m */; };
 		E63120461A5BA67E00A7ED77 /* IMPieChartLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E631203E1A5BA67E00A7ED77 /* IMPieChartLayer.m */; };
 		E63120471A5BA67E00A7ED77 /* IMPieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63120401A5BA67E00A7ED77 /* IMPieChartView.m */; };
-		E63120481A5BA67E00A7ED77 /* IMPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E63120421A5BA67E00A7ED77 /* IMPieChartViewController.m */; };
 		E63120491A5BA67E00A7ED77 /* IMPieSliceDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = E63120441A5BA67E00A7ED77 /* IMPieSliceDescriptor.m */; };
 /* End PBXBuildFile section */
 
@@ -52,8 +51,6 @@
 		E631203E1A5BA67E00A7ED77 /* IMPieChartLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMPieChartLayer.m; path = ../../../iPieChart/IMPieChartLayer.m; sourceTree = "<group>"; };
 		E631203F1A5BA67E00A7ED77 /* IMPieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMPieChartView.h; path = ../../../iPieChart/IMPieChartView.h; sourceTree = "<group>"; };
 		E63120401A5BA67E00A7ED77 /* IMPieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMPieChartView.m; path = ../../../iPieChart/IMPieChartView.m; sourceTree = "<group>"; };
-		E63120411A5BA67E00A7ED77 /* IMPieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMPieChartViewController.h; path = ../../../iPieChart/IMPieChartViewController.h; sourceTree = "<group>"; };
-		E63120421A5BA67E00A7ED77 /* IMPieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMPieChartViewController.m; path = ../../../iPieChart/IMPieChartViewController.m; sourceTree = "<group>"; };
 		E63120431A5BA67E00A7ED77 /* IMPieSliceDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMPieSliceDescriptor.h; path = ../../../iPieChart/IMPieSliceDescriptor.h; sourceTree = "<group>"; };
 		E63120441A5BA67E00A7ED77 /* IMPieSliceDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMPieSliceDescriptor.m; path = ../../../iPieChart/IMPieSliceDescriptor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,8 +143,6 @@
 				E631203E1A5BA67E00A7ED77 /* IMPieChartLayer.m */,
 				E631203F1A5BA67E00A7ED77 /* IMPieChartView.h */,
 				E63120401A5BA67E00A7ED77 /* IMPieChartView.m */,
-				E63120411A5BA67E00A7ED77 /* IMPieChartViewController.h */,
-				E63120421A5BA67E00A7ED77 /* IMPieChartViewController.m */,
 				E63120431A5BA67E00A7ED77 /* IMPieSliceDescriptor.h */,
 				E63120441A5BA67E00A7ED77 /* IMPieSliceDescriptor.m */,
 			);
@@ -257,7 +252,6 @@
 				E631201C1A5BA60700A7ED77 /* ViewController.m in Sources */,
 				E63120461A5BA67E00A7ED77 /* IMPieChartLayer.m in Sources */,
 				E63120471A5BA67E00A7ED77 /* IMPieChartView.m in Sources */,
-				E63120481A5BA67E00A7ED77 /* IMPieChartViewController.m in Sources */,
 				E63120491A5BA67E00A7ED77 /* IMPieSliceDescriptor.m in Sources */,
 				E63120191A5BA60700A7ED77 /* AppDelegate.m in Sources */,
 				E63120451A5BA67E00A7ED77 /* IMPieChartDecoratingView.m in Sources */,
@@ -452,6 +446,7 @@
 				E63120351A5BA60700A7ED77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E63120361A5BA60700A7ED77 /* Build configuration list for PBXNativeTarget "iPieCodedLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +455,7 @@
 				E63120381A5BA60700A7ED77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

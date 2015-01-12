@@ -145,7 +145,7 @@ The macro im_log allows to print debug messages in the console, this macro is de
 	   return self.data[index];
 	}
 
-Now let's implement the decorator's delegate methods:
+11) Now let's implement the decorator's delegate methods:
 
 	-(UIView *)decoratorSelectorView {
 	   return self.selectorView;
@@ -156,4 +156,4 @@ Now let's implement the decorator's delegate methods:
 	}
 	
 
-11) Now you are done, that's pretty much it.
+Now you are done, that's pretty much it.
