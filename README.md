@@ -1,5 +1,6 @@
 iPieChart
 ==============
+<img src="http://1.bp.blogspot.com/-7qLnWku9Pog/VLQXacT2jcI/AAAAAAAAAOs/4_IWPiDc7kc/s1600/piechart_screenshot.png" alt="iPieChart Screenshot" width="320" height="568" />
 
 Objective
 --------------
