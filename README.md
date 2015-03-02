@@ -20,16 +20,16 @@ You need to include in your project the following files:
 - IMPieChartDecoratingView.h
 - IMMacroToolbox.h
 
-1) Then on your View Controller declare it complies with the protocols IMPieChartViewDelegate, IMPieChartViewDataSource and IMPieChartDecoratingViewDelegate:
+1) Now make your View Controller to conform to the protocols IMPieChartViewDelegate, IMPieChartViewDataSource and IMPieChartDecoratingViewDelegate:
 
 	@interface MyViewController : UIViewController < IMPieChartDelegate, IMPieChartDataSource, IMPieChartDecoratingViewDelegate >
 
-2) Declare a property of type IMPieChartView and one of type IMPieChartDecoratingView
+2) Declare two properties in your View Controller, one of type IMPieChartView and one of type IMPieChartDecoratingView
 
 	@property (nonatomic, strong) IMPieChartView * pieChartView;
 	@property (nonatomic, strong) IMPieChartDecoratingView * decoratingView;
 
-3) declare a property of type UIImageView which will be used as the selector view (the little triangle that points to the current pie slice), the current implementation uses an UIImageView but here you can provide your own custom view:
+3) declare a property of type UIImageView which will be used as the selector view (the little black triangle that points to the current pie slice, as shown in the screenshot), the current implementation uses an UIImageView but here you can provide your own custom view:
 
 	@property (nonatomic, strong) UIImageView * selectorView;
 
