@@ -4,7 +4,13 @@ iPieChart
 
 Objective
 --------------
-PieChart was concived after my learning of linear algebra's simple vectors arithmetic. I found interesting the idea to start practicing my reacent learning in an interactive Pie Chart control. This control so far is in its basic stage but can be used by anybody and extended to fit your needs. This is a work in progress and any feedback ideas or improvements will be greatly appreciated.
+PieChart was conceived after my learning about the linear algebra vector's arithmetic. I found interesting the idea to start practicing my new learning in an interactive Pie Chart control. This control so far is in its basic stage but can be used by anyone and extended to fit your needs. This is a work in progress and any feedback ideas or improvements will be greatly appreciated.
+
+Some terminology
+--------------
+
+* **Selector View** is the View with a little arrow image that serves as the pie slice selection point
+* **Decorating View** is an added view to the main ViewController's view and the one that contains the selector view
 
 How to use it
 --------------
